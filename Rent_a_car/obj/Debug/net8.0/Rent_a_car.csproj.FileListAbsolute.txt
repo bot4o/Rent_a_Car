@@ -28,3 +28,4 @@ C:\Users\bobbi\Coding\Rent_a_car\Rent_a_car\obj\Debug\net8.0\refint\Rent_a_car.d
 C:\Users\bobbi\Coding\Rent_a_car\Rent_a_car\obj\Debug\net8.0\Rent_a_car.pdb
 C:\Users\bobbi\Coding\Rent_a_car\Rent_a_car\obj\Debug\net8.0\Rent_a_car.genruntimeconfig.cache
 C:\Users\bobbi\Coding\Rent_a_car\Rent_a_car\obj\Debug\net8.0\ref\Rent_a_car.dll
+C:\Users\bobbi\Coding\Rent_a_car\Rent_a_car\obj\Debug\net8.0\Rent_a_car.sourcelink.json
