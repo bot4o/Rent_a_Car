@@ -61,3 +61,4 @@ D:\Coding\c_sharp\Rent_a_Car\Rent_a_car\obj\Debug\net8.0\refint\Rent_a_car.dll
 D:\Coding\c_sharp\Rent_a_Car\Rent_a_car\obj\Debug\net8.0\Rent_a_car.genruntimeconfig.cache
 D:\Coding\c_sharp\Rent_a_Car\Rent_a_car\obj\Debug\net8.0\ref\Rent_a_car.dll
 D:\Coding\c_sharp\Rent_a_Car\Rent_a_car\obj\Debug\net8.0\scopedcss\Views\Login\Index.cshtml.rz.scp.css
+C:\Users\bobbi\Coding\Rent_a_Car\Rent_a_car\obj\Debug\net8.0\scopedcss\Views\Login\Index.cshtml.rz.scp.css
