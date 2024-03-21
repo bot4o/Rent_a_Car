@@ -1,26 +1,65 @@
 .login {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
     padding: 20px;
-    align-items: center;
-}
-form {
+    width: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+h1 {
+    background: transparent;
+}/*TODO: form does not have color blackground*/
+form, .no-acc{
+    width: 500px;
+    position: relative;
+    padding: 20px;
     background: red;
-    border-radius: 2px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 form h3 {
-    float: left;
+    background: transparent;
+    margin-bottom: 30px;
 }
 form .main-input {
-    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
+}
+form .main-input input {
+    padding: 15px;
+    width: 400px;
+    margin-bottom: 20px;
     background: black;
+    color: #fff;
     opacity: 50%;
+    border-radius: 5px;
     border: 0;
 }
+form .stuff {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+form .stuff .forgot {
+    float: right;
+}
+form .stuff .checkbox {
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+form .login {
+    width: 100%;
+    background: blue;
+    color: #fff;
+    padding: 10px;
+}
 .no-acc {
-    border-radius: 2px;
+    margin-top: 20px;
+    width: 100%;
 }
