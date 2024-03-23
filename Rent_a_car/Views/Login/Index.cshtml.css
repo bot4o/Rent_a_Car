@@ -1,18 +1,19 @@
-.login {
+.login { 
+    position: relative;
     padding: 20px;
     width: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 5px;
 }
-h1 {
-    background: transparent;
-}/*TODO: form does not have color blackground*/
-form, .no-acc{
-    width: 500px;
+.form, .no-acc{
     position: relative;
+    width: 500px;
     padding: 20px;
     background: red;
     border-radius: 5px;
@@ -20,16 +21,16 @@ form, .no-acc{
     flex-direction: column;
     align-items: center;
 }
-form h3 {
+.form h3 {
     background: transparent;
     margin-bottom: 30px;
 }
-form .main-input {
+.form .main-input {
     display: flex;
     flex-direction: column;
     align-content:space-between;
 }
-form .main-input input {
+.form .main-input input {
     padding: 15px;
     width: 400px;
     margin-bottom: 20px;
@@ -39,21 +40,21 @@ form .main-input input {
     border-radius: 5px;
     border: 0;
 }
-form .stuff {
+.form .stuff {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-form .stuff .forgot {
+.form .stuff .forgot {
     float: right;
 }
-form .stuff .checkbox {
+.form .stuff .checkbox {
     float: left;
     display: flex;
     justify-content: center;
 }
-form .login {
+.form .login {
     width: 100%;
     background: blue;
     color: #fff;

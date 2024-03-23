@@ -1,19 +1,20 @@
 /* _content/Rent_a_car/Views/Login/Index.cshtml.rz.scp.css */
-.login[b-bmolcrjmek] {
+.login[b-bmolcrjmek] { 
+    position: relative;
     padding: 20px;
     width: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 5px;
 }
-h1[b-bmolcrjmek] {
-    background: transparent;
-}
-form[b-bmolcrjmek], .no-acc[b-bmolcrjmek]{
-    width: 500px;
+.form[b-bmolcrjmek], .no-acc[b-bmolcrjmek]{
     position: relative;
+    width: 500px;
     padding: 20px;
     background: red;
     border-radius: 5px;
@@ -21,16 +22,16 @@ form[b-bmolcrjmek], .no-acc[b-bmolcrjmek]{
     flex-direction: column;
     align-items: center;
 }
-form h3[b-bmolcrjmek] {
+.form h3[b-bmolcrjmek] {
     background: transparent;
     margin-bottom: 30px;
 }
-form .main-input[b-bmolcrjmek] {
+.form .main-input[b-bmolcrjmek] {
     display: flex;
     flex-direction: column;
     align-content:space-between;
 }
-form .main-input input[b-bmolcrjmek] {
+.form .main-input input[b-bmolcrjmek] {
     padding: 15px;
     width: 400px;
     margin-bottom: 20px;
@@ -40,21 +41,21 @@ form .main-input input[b-bmolcrjmek] {
     border-radius: 5px;
     border: 0;
 }
-form .stuff[b-bmolcrjmek] {
+.form .stuff[b-bmolcrjmek] {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-form .stuff .forgot[b-bmolcrjmek] {
+.form .stuff .forgot[b-bmolcrjmek] {
     float: right;
 }
-form .stuff .checkbox[b-bmolcrjmek] {
+.form .stuff .checkbox[b-bmolcrjmek] {
     float: left;
     display: flex;
     justify-content: center;
 }
-form .login[b-bmolcrjmek] {
+.form .login[b-bmolcrjmek] {
     width: 100%;
     background: blue;
     color: #fff;
