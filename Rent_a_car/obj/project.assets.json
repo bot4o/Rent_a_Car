@@ -5690,24 +5690,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\boeva\\.nuget\\packages\\": {},
-    "D:\\Coding\\VS\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\bobbi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Coding\\c_sharp\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj",
+      "projectUniqueName": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj",
       "projectName": "Rent_a_car",
-      "projectPath": "D:\\Coding\\c_sharp\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj",
-      "packagesPath": "C:\\Users\\boeva\\.nuget\\packages\\",
-      "outputPath": "D:\\Coding\\c_sharp\\Rent_a_Car\\Rent_a_car\\obj\\",
+      "projectPath": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj",
+      "packagesPath": "C:\\Users\\bobbi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Coding\\VS\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\boeva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\bobbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5762,7 +5757,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
