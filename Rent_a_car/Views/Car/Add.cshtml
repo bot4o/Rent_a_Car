@@ -1,0 +1,73 @@
+@model Rent_a_car.Models.Car
+@{
+    ViewData["Title"] = "Add New Car";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="nt-3 p-3 shadow rounded">
+                <div class="text-center">
+                    <h2 class="text-info">Add New Car</h2>
+                </div>
+                <div>
+                    @Html.ValidationSummary()
+                </div>
+                <div class="nt-3 p-3">
+                    <form action="/Car/Add" method="post" enctype="multipart/form-data" autocomplete="off">
+                        <div class="mb-3 row">
+                            <label class="col-3 col-from-label text-info">Brand</label>
+                            <div class="col-9">
+                                @Html.TextBoxFor(m => m.Brand, new { @class = "form-control", placeholder="Enter Brand"})
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-3 col-from-label text-info">Model</label>
+                            <div class="col-9">
+                                @Html.TextBoxFor(m => m.Model, new { @class = "form-control", placeholder="Enter Model"})
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-3 col-from-label text-info">Year</label>
+                            <div class="col-9">
+                                @Html.TextBoxFor(m => m.Year, new { @class = "form-control", placeholder="Enter Year"})
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-3 col-from-label text-info">Seats</label>
+                            <div class="col-9">
+                                @Html.TextBoxFor(m => m.Seats, new { @class = "form-control", placeholder="Enter Seats"})
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-3 col-from-label text-info">Description</label>
+                            <div class="col-9">
+                                @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder="Enter Description"})
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-3 col-from-label text-info">Price</label>
+                            <div class="col-9">
+                                @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder="Enter Price"})
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-sm shadow rounded p-2 btn-dark" type="reset">Clear</button>
+                            <button class="btn btn-sm shadow rounded p-2 btn=success" type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    function showAlert() {
+        if('@ViewBag.isSaved' == 'True') {
+            alert("New Car Successfully Added!");
+        }
+    }
+    $(document).ready(function () {
+        showAlert();
+    })
+</script>
