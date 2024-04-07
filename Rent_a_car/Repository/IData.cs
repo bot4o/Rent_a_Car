@@ -6,5 +6,7 @@ namespace Rent_a_car.Repository
     {
         bool AddNewCar(Car newcar);
         List<Car> GetAllCars();
+        bool AddDriver(Driver newdriver);
+        List<Driver> GetAllDrivers();
     }
 }

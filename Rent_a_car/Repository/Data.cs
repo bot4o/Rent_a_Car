@@ -18,6 +18,61 @@ namespace Rent_a_car.Repository
             dbcon = this.configuration.GetConnectionString("DefaultConnection");
             this.webhost = webhost;
         }
+        public List<Driver> GetAllDrivers()
+        {
+            List<Driver> drivers = new List<Driver>();
+            Driver dr;
+            SqlConnection con = GetSqlConnection();
+            try 
+            {
+               con.Open();
+               string qry = "Select * from Drivers;";
+               SqlDataReader reader = GetData(qry, con);
+               while(reader.Read())
+               {
+                   dr = new Driver();
+                   dr.Id = int.Parse(reader["ID"].ToString());
+                   dr.Username = reader["Username"].ToString();
+                   dr.Password = reader["Password"].ToString();
+                   dr.First_Name = reader["First_Name"].ToString();
+                   dr.Last_Name = reader["Last_Name"].ToString();
+                   dr.EGN = reader["EGN"].ToString();
+                   dr.Phone = reader["Phone"].ToString();
+                   dr.Email = reader["Email"].ToString();
+                   drivers.Add(dr);
+               }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return drivers;
+        }
+        public bool AddDriver(Driver newdriver)
+        {
+            bool isSaved = false;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = String.Format("Insert into Drivers(Username, Password, First_Name, Last_Name, EGN, Phone, Email) values(" +
+                        "'{0}','{1}','{2}','{3}','{4}','{5}','{6}')", newdriver.Username, newdriver.Password, newdriver.First_Name, newdriver.Last_Name, newdriver.EGN, newdriver.Phone, newdriver.Email);
+                isSaved = SaveData(qry, con);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isSaved;
+        }
         public List<Car> GetAllCars()
         {
             var cars = new List<Car>();
@@ -28,7 +83,7 @@ namespace Rent_a_car.Repository
                 con.Open();
                 string qry = "Select * from Cars";
                 SqlDataReader reader = GetData(qry, con);
-                while(reader.Read())
+                while (reader.Read())
                 {
                     car = new Car();
                     car.Id = int.Parse(reader["ID"].ToString());
@@ -41,7 +96,7 @@ namespace Rent_a_car.Repository
                     cars.Add(car);
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -54,12 +109,12 @@ namespace Rent_a_car.Repository
         private SqlDataReader GetData(string qry, SqlConnection con)
         {
             SqlDataReader reader = null;
-            try 
+            try
             {
                 SqlCommand cmd = new SqlCommand(qry, con);
                 reader = cmd.ExecuteReader();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
