@@ -1,3 +1,4 @@
+@model IEnumerable<Rent_a_car.Models.Car>
 @{
     ViewData["Title"] = "Car";
 }
@@ -13,8 +14,8 @@
                     @Html.ActionLink("Add New Car", "Add", "Car", null, new {@class="btn btn-sm btn-primary"})
                 </div>
                 <div class="p-3">
-                    <table class="table table-responsive table-bordered">
-                        <thead>
+                    <table class="table table-responsive table-bordered text-center">
+                        <thead class=" text-info">
                             <tr>
                                 <th>ID</th>
                                 <th>Brand</th>
@@ -25,6 +26,20 @@
                                 <th>Price</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach(var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Brand</td>
+                                    <td>@item.Model</td>
+                                    <td>@item.Year</td>
+                                    <td>@item.Seats</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.Price</td>
+                                </tr>
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>

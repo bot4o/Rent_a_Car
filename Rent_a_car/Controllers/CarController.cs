@@ -13,7 +13,8 @@ namespace Rent_a_car.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var list = data.GetAllCars();
+            return View(list);
         }
         public IActionResult Add()
         {
