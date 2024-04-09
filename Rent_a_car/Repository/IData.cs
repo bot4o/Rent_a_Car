@@ -8,5 +8,8 @@ namespace Rent_a_car.Repository
         List<Car> GetAllCars();
         bool AddDriver(Driver newdriver);
         List<Driver> GetAllDrivers();
+        bool BookingNow(Rent rent);
+
+        List<string> GetBrand();
     }
 }

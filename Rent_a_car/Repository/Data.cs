@@ -18,6 +18,51 @@ namespace Rent_a_car.Repository
             dbcon = this.configuration.GetConnectionString("DefaultConnection");
             this.webhost = webhost;
         }
+        public List<string> GetBrand()
+        {
+            List<string> brand = new List<string>();
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = "Select distinct Brand from Cars;";
+                SqlDataReader reader = GetData(qry, con);
+                while(reader.Read())
+                {
+                    brand.Add(reader["Brand"].ToString());
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally {
+                con.Close();
+            }
+            return brand;
+        }
+        public bool BookingNow(Rent rent)
+        {
+            bool isSaved = false;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = String.Format("Insert into Rents(Selected_car, Start_date, End_date, Driver values(" +
+                        "'{0}','{1}','{2}','{3}')", rent.Selected_car, rent.Start_date, rent.End_date, rent.Driver);
+                isSaved = SaveData(qry, con);
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isSaved;
+        }
+
         public List<Driver> GetAllDrivers()
         {
             List<Driver> drivers = new List<Driver>();
