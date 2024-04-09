@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj": {}
+    "C:\\Users\\bobbi\\Coding\\Rent_a_car\\Rent_a_car\\Rent_a_car.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj": {
+    "C:\\Users\\bobbi\\Coding\\Rent_a_car\\Rent_a_car\\Rent_a_car.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj",
+        "projectUniqueName": "C:\\Users\\bobbi\\Coding\\Rent_a_car\\Rent_a_car\\Rent_a_car.csproj",
         "projectName": "Rent_a_car",
-        "projectPath": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Rent_a_car.csproj",
+        "projectPath": "C:\\Users\\bobbi\\Coding\\Rent_a_car\\Rent_a_car\\Rent_a_car.csproj",
         "packagesPath": "C:\\Users\\bobbi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\obj\\",
+        "outputPath": "C:\\Users\\bobbi\\Coding\\Rent_a_car\\Rent_a_car\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bobbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.0, )"

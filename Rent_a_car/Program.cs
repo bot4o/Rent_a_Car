@@ -1,4 +1,7 @@
 using Rent_a_car.Repository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 namespace Rent_a_car;
 
 public class Program
@@ -10,6 +13,7 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
         builder.Services.AddTransient(typeof(IData), typeof(Data));
+
 
         var app = builder.Build();
 
@@ -31,6 +35,8 @@ public class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
+        
+
 
         app.Run();
     }
