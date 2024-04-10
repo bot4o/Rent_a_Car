@@ -11,6 +11,7 @@ namespace Rent_a_car.Controllers
         {
             data = _data;
         }
+        //[Authorize(Rents = "Admin")]
         public IActionResult Index()
         {
             var list = data.GetAllCars();
