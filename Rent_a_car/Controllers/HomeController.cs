@@ -1,4 +1,9 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Rent_a_car.Models;
 
@@ -17,7 +22,7 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    [Authorize(Roles = "Manager")]
     public IActionResult Privacy()
     {
         return View();
