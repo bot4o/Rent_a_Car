@@ -3,20 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\repository\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\repository\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\views\\car\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\views\\car\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\areas\\identity\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\areas\\identity\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\repository\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\repository\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,21 +46,10 @@
       "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\areas\\identity\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\areas\\identity\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetUserRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,63 +59,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Car\\Add.cshtml",
-              "RelativeDocumentMoniker": "Rent_a_car\\Views\\Car\\Add.cshtml",
-              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Car\\Add.cshtml",
-              "RelativeToolTip": "Rent_a_car\\Views\\Car\\Add.cshtml",
-              "ViewState": "AQIAAEYAAAAAAABryq0lwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-11T06:06:31.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Car\\Index.cshtml",
-              "RelativeDocumentMoniker": "Rent_a_car\\Views\\Car\\Index.cshtml",
-              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Car\\Index.cshtml",
-              "RelativeToolTip": "Rent_a_car\\Views\\Car\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-11T06:04:37.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\CarController.cs",
-              "RelativeDocumentMoniker": "Rent_a_car\\Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\CarController.cs",
-              "RelativeToolTip": "Rent_a_car\\Controllers\\CarController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T06:03:51.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Data.cs",
-              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Repository\\Data.cs",
-              "RelativeDocumentMoniker": "Rent_a_car\\Repository\\Data.cs",
-              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Repository\\Data.cs",
-              "RelativeToolTip": "Rent_a_car\\Repository\\Data.cs",
-              "ViewState": "AQIAAHgAAAAAAACQeds0wAAAAAAAAAAA",
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAAEcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T06:03:33.776Z",
+              "WhenOpened": "2024-04-12T06:33:57.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwA8AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T06:33:48.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "20240410164422_addedIdentity.cs",
               "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Migrations\\20240410164422_addedIdentity.cs",
               "RelativeDocumentMoniker": "Rent_a_car\\Migrations\\20240410164422_addedIdentity.cs",
@@ -119,45 +97,42 @@
               "RelativeToolTip": "Rent_a_car\\Migrations\\20240410164422_addedIdentity.cs",
               "ViewState": "AQIAAHcAAAAAAACBKWUmwAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T06:00:45.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T06:00:45.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Rent_a_car\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Rent_a_car\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T05:46:48.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "dbo.AspNetUserRoles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetUserRoles.sql",
               "ToolTip": "dbo.AspNetUserRoles [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-11T05:21:11.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T05:21:11.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "dbo.AspNetRoles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetRoles.sql",
               "ToolTip": "dbo.AspNetRoles [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-11T05:33:39.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T05:33:39.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "dbo.AspNetUsers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Rent_a_car/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
@@ -167,20 +142,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
+              "Title": "Data.cs",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Repository\\Data.cs",
+              "RelativeDocumentMoniker": "Rent_a_car\\Repository\\Data.cs",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Repository\\Data.cs",
+              "RelativeToolTip": "Rent_a_car\\Repository\\Data.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAswMQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T06:03:33.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Rent_a_car\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Rent_a_car\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAjAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAuwBQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-11T05:22:33.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T17:33:30.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\CarController.cs",
+              "RelativeDocumentMoniker": "Rent_a_car\\Controllers\\CarController.cs",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\CarController.cs",
+              "RelativeToolTip": "Rent_a_car\\Controllers\\CarController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T06:03:51.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Car\\Index.cshtml",
+              "RelativeDocumentMoniker": "Rent_a_car\\Views\\Car\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Car\\Index.cshtml",
+              "RelativeToolTip": "Rent_a_car\\Views\\Car\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T06:04:37.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Program.cs",
               "RelativeDocumentMoniker": "Rent_a_car\\Program.cs",
@@ -188,21 +212,7 @@
               "RelativeToolTip": "Rent_a_car\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T04:47:49.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Rent_a_car\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T17:33:30.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T04:47:49.052Z"
             }
           ]
         }

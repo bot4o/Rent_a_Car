@@ -16,6 +16,15 @@ html {
   position: relative;
   min-height: 100%;
 }
+.Acc {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.Add #register {
+    border: black 2px solid;
+    border-radius: 5px;
+}
 
 body {
   margin-bottom: 60px;
