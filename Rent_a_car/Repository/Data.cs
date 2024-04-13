@@ -10,13 +10,39 @@ namespace Rent_a_car.Repository
     {
         private readonly IConfiguration configuration;
         private readonly string dbcon = "";
+        private readonly string dbcon1 = ""; 
         private readonly IWebHostEnvironment webhost;
 
         public Data(IConfiguration configuration, IWebHostEnvironment webhost)
         {
             this.configuration = configuration;
             dbcon = this.configuration.GetConnectionString("DefaultConnection");
+            dbcon1 = this.configuration.GetConnectionString("ApplicationDbContextConnection");
             this.webhost = webhost;
+        }
+        public List<string> GetModel(string brand)
+        {
+            List<string> model = new List<string>();
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = "Select distinct Model from Cars where Brand='" + brand + "'";
+                SqlDataReader reader = GetData(qry, con);
+                while (reader.Read())
+                {
+                    model.Add(reader["Model"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return model;
         }
         public List<string> GetBrand()
         {
@@ -27,16 +53,17 @@ namespace Rent_a_car.Repository
                 con.Open();
                 string qry = "Select distinct Brand from Cars;";
                 SqlDataReader reader = GetData(qry, con);
-                while(reader.Read())
+                while (reader.Read())
                 {
                     brand.Add(reader["Brand"].ToString());
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
-            finally {
+            finally
+            {
                 con.Close();
             }
             return brand;
@@ -49,10 +76,10 @@ namespace Rent_a_car.Repository
             {
                 con.Open();
                 string qry = String.Format("Insert into Rents(Selected_car, Start_date, End_date, Driver values(" +
-                        "'{0}','{1}','{2}','{3}')", rent.Selected_car, rent.Start_date, rent.End_date, rent.Driver);
+                        "'{0}','{1}','{2}','{3}')", rent.CarId, rent.StartDate, rent.EndDate, rent.DriverId);
                 isSaved = SaveData(qry, con);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -67,25 +94,25 @@ namespace Rent_a_car.Repository
         {
             List<Driver> drivers = new List<Driver>();
             Driver dr;
-            SqlConnection con = GetSqlConnection();
-            try 
+            SqlConnection con = GetSqlConnection1();
+            try
             {
-               con.Open();
-               string qry = "Select * from Drivers;";
-               SqlDataReader reader = GetData(qry, con);
-               while(reader.Read())
-               {
-                   dr = new Driver();
-                   dr.Id = int.Parse(reader["ID"].ToString());
-                   dr.Username = reader["Username"].ToString();
-                   dr.Password = reader["Password"].ToString();
-                   dr.First_Name = reader["First_Name"].ToString();
-                   dr.Last_Name = reader["Last_Name"].ToString();
-                   dr.EGN = reader["EGN"].ToString();
-                   dr.Phone = reader["Phone"].ToString();
-                   dr.Email = reader["Email"].ToString();
-                   drivers.Add(dr);
-               }
+                con.Open();
+                string qry = "Select * from dbo.AspNetUsers;";
+                SqlDataReader reader = GetData(qry, con);
+                while (reader.Read())
+                {
+                    dr = new Driver();
+                    dr.Id = reader["ID"].ToString();
+                    dr.UserName = reader["UserName"].ToString();
+                    dr.PasswordHash = reader["PasswordHash"].ToString();
+                    dr.First_Name = reader["First_Name"].ToString();
+                    dr.Last_Name = reader["Last_Name"].ToString();
+                    dr.EGN = reader["EGN"].ToString();
+                    dr.PhoneNumber = reader["PhoneNumber"].ToString();
+                    dr.Email = reader["Email"].ToString();
+                    drivers.Add(dr);
+                }
             }
             catch (Exception)
             {
@@ -105,7 +132,7 @@ namespace Rent_a_car.Repository
             {
                 con.Open();
                 string qry = String.Format("Insert into Drivers(Username, Password, First_Name, Last_Name, EGN, Phone, Email) values(" +
-                        "'{0}','{1}','{2}','{3}','{4}','{5}','{6}')", newdriver.Username, newdriver.Password, newdriver.First_Name, newdriver.Last_Name, newdriver.EGN, newdriver.Phone, newdriver.Email);
+                        "'{0}','{1}','{2}','{3}','{4}','{5}','{6}')", newdriver.UserName, newdriver.PasswordHash, newdriver.First_Name, newdriver.Last_Name, newdriver.EGN, newdriver.PhoneNumber, newdriver.Email);
                 isSaved = SaveData(qry, con);
             }
             catch (Exception)
@@ -194,6 +221,10 @@ namespace Rent_a_car.Repository
         private SqlConnection GetSqlConnection()
         {
             return new SqlConnection(dbcon);
+        }
+        private SqlConnection GetSqlConnection1()//shtoto imam dve bazi danni :-)
+        {
+            return new SqlConnection(dbcon1);
         }
 
         private bool SaveData(string qry, SqlConnection con)

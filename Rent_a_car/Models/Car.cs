@@ -7,7 +7,7 @@ namespace Rent_a_car.Models
         [Required]
         public string? Brand { get; set; }
         [Required]
-        public string? Model{ get; set; }
+        public string? Model { get; set; }
         [Required]
         public int Year { get; set; }
         [Required]
@@ -16,5 +16,7 @@ namespace Rent_a_car.Models
         public string? Description { get; set; }
         [Required]
         public double Price { get; set; }
+
+        public List<Rent>? rents { get; set; }
     }
 }

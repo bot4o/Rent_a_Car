@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyApplication.Data;
 using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
+using Rent_a_car.Models;
+using Microsoft.AspNetCore.Authentication;
 namespace Rent_a_car;
 
 public class Program
@@ -15,10 +17,26 @@ public class Program
 
         builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
-        builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)//true
-            .AddRoles<IdentityRole>()
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+        builder.Services.AddDefaultIdentity<Driver>(options =>{
+            options.SignIn.RequireConfirmedAccount = false;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireLowercase = false;
+            options.Password.RequiredUniqueChars = -1;
+            })//true
 
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+
+        builder.Services.Configure<AuthenticationOptions>(options =>
+        {
+            options.DefaultAuthenticateScheme = null;
+            options.DefaultChallengeScheme = null;
+            options.DefaultSignInScheme = null;
+        });
+
+        builder.Services.AddScoped<Data>();
+        builder.Services.AddControllers();
         // Add services to the container.
         builder.Services.AddControllersWithViews();
 
@@ -51,43 +69,43 @@ public class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
-        
-        using(var scope = app.Services.CreateScope())
+
+        using (var scope = app.Services.CreateScope())
         {
-            var roleManager = 
+            var roleManager =
                 scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-            var roles = new[] { "Admin", "Manager", "Member" };
+            var roles = new[] { "Admin", "User" };
 
-            foreach(var role in roles)
+            foreach (var role in roles)
             {
                 if (!await roleManager.RoleExistsAsync(role))
                     await roleManager.CreateAsync(new IdentityRole(role));
             }
         }
 
-        using (var scope = app.Services.CreateScope())
-        {
-            var userManager =
-                scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+        //        using (var scope = app.Services.CreateScope())
+        //        {
+        //            var userManager =
+        //                scope.ServiceProvider.GetRequiredService<UserManager<Driver>>();
 
-            string email = "admin@admin.com";
-            string password = "Test1234,";
+        //            string email = "admin@admin.com";
+        //            string password = "Test1234,";
 
 
-            if (await userManager.FindByEmailAsync(email) == null)
-            {
-                var user = new IdentityUser();
-                user.UserName = email;
-                user.Email = email;
-//                user.EmailConfirmed = true;
+        //            if (await userManager.FindByEmailAsync(email) == null)
+        //            {
+        //                var user = new Driver();
+        //                user.UserName = email;
+        //                user.Email = email;
+        ////                user.EmailConfirmed = true;
 
-                await userManager.CreateAsync(user, password);
+        //                await userManager.CreateAsync(user, password);
 
-                await userManager.AddToRoleAsync(user, "Admin");
-            }
+        //                await userManager.AddToRoleAsync(user, "Admin");
+        //            }
 
-        }
+        //        }
 
         app.Run();
     }

@@ -1,16 +1,24 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Rent_a_car.Models
 {
     public class Rent
     {
+        [Key]
         public int Id { get; set; }
+        [Column(TypeName = "nvarchar(450)")]
         [Required]
-        public int Selected_car { get; set; }
+        public string DriverId { get; set; }
+        [Column(TypeName = "int")]
         [Required]
-        public DateTime Start_date { get; set; }
-        [Required]
-        public DateTime End_date { get; set; }
-        [Required]
-        public int Driver { get; set; }
+        public int CarId { get; set; }
+
+
+        public Driver Driver { get; set; }
+        public Car Car { get; set; }
+
+
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }

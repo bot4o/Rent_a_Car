@@ -11,5 +11,8 @@ namespace Rent_a_car.Repository
         bool BookingNow(Rent rent);
 
         List<string> GetBrand();
+
+        List<string> GetModel(string brand);
+
     }
 }

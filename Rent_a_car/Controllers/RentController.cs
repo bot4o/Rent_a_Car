@@ -21,7 +21,7 @@ namespace Rent_a_car.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Add(Rent rent)
+        public IActionResult Add(Rent rent)//egh egh!!!
         {
             if(!ModelState.IsValid)
                 return View(rent);
@@ -33,6 +33,17 @@ namespace Rent_a_car.Controllers
         public IActionResult GetBrand()
         {
             var list = data.GetBrand();
+            return Json(list);
+        }
+        [HttpGet]
+        public IActionResult GetModel(string brand)
+        {
+            var list = data.GetModel(brand);
+            return Json(list);
+        }
+        public IActionResult GetDriver()
+        {
+            var list = data.GetAllDrivers();
             return Json(list);
         }
     }

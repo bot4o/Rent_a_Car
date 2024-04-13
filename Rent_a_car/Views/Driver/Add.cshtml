@@ -17,13 +17,13 @@ ViewData["Title"] = "Driver";
                         <div class="mb-3 row">
                             <label class="col-3 col-form-label text-info">Username</label>
                             <div class="col-9">
-                                @Html.TextBoxFor(m => m.Username, new {@class="form-control", placeholder="Enter Username"})
+                                @Html.TextBoxFor(m => m.UserName, new {@class="form-control", placeholder="Enter Username"})
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label class="col-3 col-form-label text-info">Password</label>
                             <div class="col-9">
-                                @Html.TextBoxFor(m => m.Password, new {@class="form-control", placeholder="Enter Password"})
+                                @Html.TextBoxFor(m => m.PasswordHash, new {@class="form-control", placeholder="Enter Password"})
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -47,7 +47,7 @@ ViewData["Title"] = "Driver";
                         <div class="mb-3 row">
                             <label class="col-3 col-form-label text-info">Phone</label>
                             <div class="col-9">
-                                @Html.TextBoxFor(m => m.Phone, new {@class="form-control", placeholder="Enter Phone"})
+                                @Html.TextBoxFor(m => m.PhoneNumber, new {@class="form-control", placeholder="Enter Phone"})
                             </div>
                         </div>
                         <div class="mb-3 row">

@@ -18,22 +18,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Rent_a_car.Models;
 
 namespace Rent_a_car.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly SignInManager<Driver> _signInManager;
+        private readonly UserManager<Driver> _userManager;
+        private readonly IUserStore<Driver> _userStore;
+        private readonly IUserEmailStore<Driver> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            IUserStore<IdentityUser> userStore,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<Driver> userManager,
+            IUserStore<Driver> userStore,
+            SignInManager<Driver> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -97,6 +98,16 @@ namespace Rent_a_car.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            [Required]
+            public string UserName { get; set;}
+            [Required]
+            public string First_Name { get; set;}
+            [Required]
+            public string Last_Name{ get; set;}
+            [Required]
+            public string EGN { get; set;}
+            [Required]
+            public string PhoneNumber { get; set;}
         }
 
 
@@ -112,11 +123,13 @@ namespace Rent_a_car.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
+                var user = new Driver { PhoneNumber = Input.PhoneNumber, EGN = Input.EGN, UserName = Input.UserName, Email = Input.Email, First_Name = Input.First_Name, Last_Name = Input.Last_Name };
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
+                await _userManager.AddToRoleAsync(user, "Admin");
 
                 if (result.Succeeded)
                 {
@@ -154,27 +167,27 @@ namespace Rent_a_car.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        private Driver CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<Driver>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
-                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(Driver)}'. " +
+                    $"Ensure that '{nameof(Driver)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<IdentityUser> GetEmailStore()
+        private IUserEmailStore<Driver> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<IdentityUser>)_userStore;
+            return (IUserEmailStore<Driver>)_userStore;
         }
     }
 }
