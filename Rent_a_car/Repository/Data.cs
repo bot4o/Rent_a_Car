@@ -9,21 +9,19 @@ namespace Rent_a_car.Repository
     public class Data : IData
     {
         private readonly IConfiguration configuration;
-        private readonly string dbcon = "";
         private readonly string dbcon1 = ""; 
         private readonly IWebHostEnvironment webhost;
 
         public Data(IConfiguration configuration, IWebHostEnvironment webhost)
         {
             this.configuration = configuration;
-            dbcon = this.configuration.GetConnectionString("DefaultConnection");
             dbcon1 = this.configuration.GetConnectionString("ApplicationDbContextConnection");
             this.webhost = webhost;
         }
         public List<string> GetModel(string brand)
         {
             List<string> model = new List<string>();
-            SqlConnection con = GetSqlConnection();
+            SqlConnection con = GetSqlConnection1();
             try
             {
                 con.Open();
@@ -47,7 +45,7 @@ namespace Rent_a_car.Repository
         public List<string> GetBrand()
         {
             List<string> brand = new List<string>();
-            SqlConnection con = GetSqlConnection();
+            SqlConnection con = GetSqlConnection1();
             try
             {
                 con.Open();
@@ -71,7 +69,7 @@ namespace Rent_a_car.Repository
         public bool BookingNow(Rent rent)
         {
             bool isSaved = false;
-            SqlConnection con = GetSqlConnection();
+            SqlConnection con = GetSqlConnection1();
             try
             {
                 con.Open();
@@ -127,7 +125,7 @@ namespace Rent_a_car.Repository
         public bool AddDriver(Driver newdriver)
         {
             bool isSaved = false;
-            SqlConnection con = GetSqlConnection();
+            SqlConnection con = GetSqlConnection1();
             try
             {
                 con.Open();
@@ -149,7 +147,7 @@ namespace Rent_a_car.Repository
         {
             var cars = new List<Car>();
             Car car;
-            SqlConnection con = GetSqlConnection();
+            SqlConnection con = GetSqlConnection1();
             try
             {
                 con.Open();
@@ -195,11 +193,11 @@ namespace Rent_a_car.Repository
         public bool AddNewCar(Car newcar)
         {
             bool isSaved = false;
-            SqlConnection con = GetSqlConnection();
+            SqlConnection con = GetSqlConnection1();
             try
             {
                 con.Open();
-                string qry = string.Format("INSERT INTO Cars(Brand, Model, Year, Seats, Description, Price) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')",
+                string qry = string.Format("INSERT INTO Cars(Brand, Model, Year, Seats, Description, Price) VALUES ('{0}', '{1}', '{2}', '{3}', N'{4}', '{5}')",
                         newcar.Brand, newcar.Model, newcar.Year, newcar.Seats, newcar.Description, newcar.Price);
                 isSaved = SaveData(qry, con);
             }
@@ -218,11 +216,7 @@ namespace Rent_a_car.Repository
             return isSaved;
         }
 
-        private SqlConnection GetSqlConnection()
-        {
-            return new SqlConnection(dbcon);
-        }
-        private SqlConnection GetSqlConnection1()//shtoto imam dve bazi danni :-)
+        private SqlConnection GetSqlConnection1() 
         {
             return new SqlConnection(dbcon1);
         }
