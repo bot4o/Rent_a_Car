@@ -4,12 +4,15 @@
 }
 <div class="container">
     <div class="row">
+
+        @if (User.IsInRole("Admin"))
+        {
         <div class="mt-3 p-3 shadow rounded">
             <div class="d-flex justify-content-between mb-3 p-3">
                 <h3 class="text-info">Driver List</h3>
                 @Html.ActionLink("Add Driver", "Add", "Driver", null, new {@class="btn btn-sm btn-primary"})
             </div>
-            <div class="p-3">
+            <div class="p-2">
                 <table class="table table-responsive table-bordered text-center">
                     <thead class="text-info">
                         <tr>
@@ -24,22 +27,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                       @foreach(var item in Model)
-                       {
-                            <tr>
-                                <td>@item.Id</td>
-                                <td>@item.UserName</td>
-                                <td>@item.PasswordHash</td>
-                                <td>@item.First_Name</td>
-                                <td>@item.Last_Name</td>
-                                <td>@item.EGN</td>
-                                <td>@item.PhoneNumber</td>
-                                <td>@item.Email</td>
-                            </tr>
-                       }
+                        @foreach(var item in Model)
+                        {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.UserName</td>
+                            <td>@item.PasswordHash</td>
+                            <td>@item.First_Name</td>
+                            <td>@item.Last_Name</td>
+                            <td>@item.EGN</td>
+                            <td>@item.PhoneNumber</td>
+                            <td>@item.Email</td>
+                        </tr>
+                        }
                     </tbody>
                 </table>
             </div>
         </div>
+        }
+        else
+        {
+            <p>Nothing here</p>
+        }
     </div>
 </div>

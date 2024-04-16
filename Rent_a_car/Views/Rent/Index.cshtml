@@ -5,37 +5,45 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="mt-3 p-3 shadow rounded">
-                <div class="d-flex justify-content-between border-bottom mb-3">
-                    <h2 class="text-info">Rent List</h2>
-                    @Html.ActionLink("Book Now", "Add", "Rent", null, new {@class="btn btn-sm btn-primary"})
-                </div>
-                <div class="mt-3 p-3">
-                    <table class="table table-responsive table-bordered text-center">
-                        <thead class="text-info">
-                            <tr>
-                                <th>ID</th>
-                                <th>DriverId</th>
-                                <th>CarId</th>
-                                <th>StartDate</th>
-                                <th>EndDate</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach(var item in Model)
-                            {
+                @if (User.IsInRole("Admin"))
+                {
+                <div class="mt-3 p-3 shadow rounded">
+                    <div class="d-flex justify-content-between border-bottom mb-3">
+                        <h2 class="text-info">Rent List</h2>
+                        @Html.ActionLink("Book Now", "Add", "Rent", null, new { @class = "btn btn-sm btn-primary" })
+                    </div>
+                    <div class="mt-3 p-3">
+                        <table class="table table-responsive table-bordered text-center">
+                            <thead class="text-info">
                                 <tr>
-                                    <td>@item.Id</td>
-                                    <td>@item.DriverId</td>
-                                    <td>@item.CarId</td>
-                                    <td>@item.StartDate</td>
-                                    <td>@item.EndDate</td>
+                                    <th>ID</th>
+                                    <th>DriverId</th>
+                                    <th>CarId</th>
+                                    <th>StartDate</th>
+                                    <th>EndDate</th>
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.DriverId</td>
+                                        <td>@item.CarId</td>
+                                        <td>@item.StartDate</td>
+                                        <td>@item.EndDate</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
+                }
+                else
+                {
+                   <p>Nothing here</p> 
+                }
+            
         </div>
     </div>
 </div>

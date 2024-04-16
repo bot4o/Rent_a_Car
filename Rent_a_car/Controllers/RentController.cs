@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Rent_a_car.Models;
 using Rent_a_car.Repository;
 
@@ -11,11 +12,17 @@ namespace Rent_a_car.Controllers
         {
             this.data = data;
         }
-
         public IActionResult Index()
         {
-            var list = data.GetAllRents();
-            return View(list);
+            if (User.IsInRole("Admin"))
+            {
+                var list = data.GetAllRents();
+                return View(list);
+            }
+            else
+            {
+                return(View());
+            }
         }
         public IActionResult Add()
         {

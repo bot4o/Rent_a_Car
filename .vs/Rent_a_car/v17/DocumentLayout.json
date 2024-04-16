@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\views\\rent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\views\\rent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|c:\\users\\bobbi\\coding\\rent_a_car\\rent_a_car\\controllers\\rentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD8EF52-758F-40AB-95C1-6498AE47C1F5}|Rent_a_car\\Rent_a_car.csproj|solutionrelative:rent_a_car\\controllers\\rentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Rent_a_car\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Rent\\Index.cshtml",
+              "RelativeDocumentMoniker": "Rent_a_car\\Views\\Rent\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Views\\Rent\\Index.cshtml",
+              "RelativeToolTip": "Rent_a_car\\Views\\Rent\\Index.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-16T14:10:18.431Z",
+              "WhenOpened": "2024-04-16T16:27:58.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RentController.cs",
+              "DocumentMoniker": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\RentController.cs",
+              "RelativeDocumentMoniker": "Rent_a_car\\Controllers\\RentController.cs",
+              "ToolTip": "C:\\Users\\bobbi\\Coding\\Rent_a_Car\\Rent_a_car\\Controllers\\RentController.cs",
+              "RelativeToolTip": "Rent_a_car\\Controllers\\RentController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA1wBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T16:18:07.303Z",
               "EditorCaption": ""
             }
           ]
