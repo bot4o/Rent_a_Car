@@ -1,4 +1,8 @@
+@using Microsoft.AspNetCore.Identity
 @model Rent_a_car.Models.Rent
+@inject SignInManager<Driver> SignInManager
+@inject UserManager<Driver> UserManager
+
 @{
     ViewData["Title"] = "Booking Now";
 }
@@ -13,21 +17,21 @@
                     @Html.ValidationSummary()
                 </div>
                 <div class="p-3">
-                    <form action="/Rent/Add" method="post" autocomplete="off">
+                    <form action="/Rent/Add" method="post" autocomplete="">
                         <div id="locationDetails">
                             <div class="mb-3 row">
                                 <label class="col-3 col-form-label text-info">Start date</label>
                                 <div class="col-9">
-                                    @Html.TextBoxFor(m => m.StartDate, new {@class="form-control", type="datetime-local"})
+                                    @Html.TextBoxFor(m => m.StartDate, new { @class = "form-control", type = "datetime-local" })
                                 </div>
                             </div>
                             <div class="mb-3 row">
                                 <label class="col-3 col-form-label text-info">End date</label>
                                 <div class="col-9">
-                                    @Html.TextBoxFor(m => m.EndDate, new {@class="form-control", type="datetime-local"})
+                                    @Html.TextBoxFor(m => m.EndDate, new { @class = "form-control", type = "datetime-local" })
                                 </div>
                             </div>
-                            <div id="cardetails" >
+                            <div id="cardetails">
                                 <div class="mb-3 row">
                                     <label class="col-3 col-form-label text-info">Brand</label>
                                     <div class="col-9">
@@ -44,14 +48,14 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="mb-3 row">
-                                    <label class="col-3 col-form-label text-info">Driver</label>
-                                    <div class="col-9">
-                                        <select id="driverddl" name="Driver" class="form-select">
-                                            <option>Select Driver</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                @* <div class="mb-3 row">
+                                        <label class="col-3 col-form-label text-info">UserName</label>
+                                            <div class="col-9">
+                                                <select id="driverddl" name="UserName" class="form-select">
+                                                    <option>Select Driver</option>
+                                                </select>
+                                            </div>
+                                   </div> *@
                                 <div class="mb-3">
                                     <button class="btn btn-sm p-2 btn-dark" type="reset">
                                         Clear
@@ -112,7 +116,7 @@
                 let options = "";
                 for (let item of data) {
                     console.log(item); // Check the structure of each item
-                    options += `<option value=${item.id}>${item.userName}</option>`;
+                    options += `<option value=${item.userName}>${item.userName}</option>`;
                 }
                 $('#driverddl').append(options);
             },
@@ -131,3 +135,4 @@
     
 
 </script>
+

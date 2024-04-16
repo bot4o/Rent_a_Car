@@ -20,13 +20,13 @@ public class ApplicationDbContext : IdentityDbContext<Driver>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Entity<Rent>()
+        /*builder.Entity<Rent>()
             .HasOne(c => c.Car)
             .WithMany(r => r.rents)
             .HasForeignKey(c => c.CarId);
         builder.Entity<Rent>()
             .HasOne(u => u.Driver)
             .WithMany(r => r.rents)
-            .HasForeignKey(u => u.DriverId);
+            .HasForeignKey(u => u.DriverId);*/
     }
 }

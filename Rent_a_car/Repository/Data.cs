@@ -9,24 +9,73 @@ namespace Rent_a_car.Repository
     public class Data : IData
     {
         private readonly IConfiguration configuration;
-        private readonly string dbcon1 = ""; 
+        private readonly string dbcon = ""; 
         private readonly IWebHostEnvironment webhost;
 
         public Data(IConfiguration configuration, IWebHostEnvironment webhost)
         {
             this.configuration = configuration;
-            dbcon1 = this.configuration.GetConnectionString("ApplicationDbContextConnection");
+            dbcon = this.configuration.GetConnectionString("ApplicationDbContextConnection");
             this.webhost = webhost;
+        }
+        public int GetCarIdByBrandandModel(string brand, string model)
+        {
+            int carId = 0;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = $"SELECT * FROM dbo.Cars WHERE Brand = '{brand}' AND Model = '{model}'";
+                SqlDataReader reader = GetData(qry, con);
+                while (reader.Read())
+                {
+                    carId = int.Parse(reader["ID"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return carId;
+        }
+        public string GetDriverIdByUsername(string username)
+        {
+            string driverId = null;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = "SELECT Id FROM AspNetUsers WHERE UserName = '"+ username +"'";
+                SqlDataReader reader = GetData(qry, con);
+                if(reader.Read())
+                {
+                    driverId = reader["Id"].ToString();
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return driverId;
         }
         public List<string> GetModel(string brand)
         {
             List<string> model = new List<string>();
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
                 string qry = "Select distinct Model from Cars where Brand='" + brand + "'";
                 SqlDataReader reader = GetData(qry, con);
+                
                 while (reader.Read())
                 {
                     model.Add(reader["Model"].ToString());
@@ -45,7 +94,7 @@ namespace Rent_a_car.Repository
         public List<string> GetBrand()
         {
             List<string> brand = new List<string>();
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
@@ -66,10 +115,42 @@ namespace Rent_a_car.Repository
             }
             return brand;
         }
+        public List<Rent> GetAllRents()
+        {
+            var rents = new List<Rent>();
+            Rent rent;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = "Select * from Rents";
+                SqlDataReader reader = GetData(qry, con);
+                while (reader.Read())
+                {
+                    rent = new Rent();
+                    rent.Id = int.Parse(reader["ID"].ToString());
+                    rent.DriverId = reader["DriverId"].ToString();
+                    rent.CarId = int.Parse(reader["CarId"].ToString());
+                    rent.StartDate = DateTime.Parse(reader["StartDate"].ToString());
+                    rent.EndDate = DateTime.Parse(reader["EndDate"].ToString());
+                    rents.Add(rent);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return rents;
+        }
+
         public bool BookingNow(Rent rent)
         {
             bool isSaved = false;
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
@@ -92,7 +173,7 @@ namespace Rent_a_car.Repository
         {
             List<Driver> drivers = new List<Driver>();
             Driver dr;
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
@@ -125,7 +206,7 @@ namespace Rent_a_car.Repository
         public bool AddDriver(Driver newdriver)
         {
             bool isSaved = false;
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
@@ -147,7 +228,7 @@ namespace Rent_a_car.Repository
         {
             var cars = new List<Car>();
             Car car;
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
@@ -193,7 +274,7 @@ namespace Rent_a_car.Repository
         public bool AddNewCar(Car newcar)
         {
             bool isSaved = false;
-            SqlConnection con = GetSqlConnection1();
+            SqlConnection con = GetSqlConnection();
             try
             {
                 con.Open();
@@ -216,10 +297,11 @@ namespace Rent_a_car.Repository
             return isSaved;
         }
 
-        private SqlConnection GetSqlConnection1() 
+        private SqlConnection GetSqlConnection() 
         {
-            return new SqlConnection(dbcon1);
+            return new SqlConnection(dbcon);
         }
+
 
         private bool SaveData(string qry, SqlConnection con)
         {

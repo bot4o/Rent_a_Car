@@ -1,3 +1,4 @@
+@model IEnumerable<Rent_a_car.Models.Rent>
 @{
     ViewData["Title"] = "Rent";
 }
@@ -20,6 +21,18 @@
                                 <th>EndDate</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach(var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.DriverId</td>
+                                    <td>@item.CarId</td>
+                                    <td>@item.StartDate</td>
+                                    <td>@item.EndDate</td>
+                                </tr>
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>

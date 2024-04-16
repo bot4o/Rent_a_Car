@@ -14,18 +14,24 @@ namespace Rent_a_car.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var list = data.GetAllRents();
+            return View(list);
         }
         public IActionResult Add()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Add(Rent rent)//egh egh!!!
+        public IActionResult Add(MakeRentModel rent)//egh egh!!!
         {
-            if(!ModelState.IsValid)
+            Rent k = new Rent();
+            k.DriverId = rent.UserId;
+            k.CarId = data.GetCarIdByBrandandModel(rent.Brand, rent.Model);
+            k.StartDate = rent.StartDate;
+            k.EndDate = rent.EndDate;
+            if (!ModelState.IsValid)
                 return View(rent);
-            ViewBag.IsSaved = data.BookingNow(rent);
+            ViewBag.IsSaved = data.BookingNow(k);
             ModelState.Clear();
             return View();
         }
