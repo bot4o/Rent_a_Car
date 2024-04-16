@@ -98,16 +98,6 @@ namespace Rent_a_car.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-            [Required]
-            public string UserName { get; set;}
-            [Required]
-            public string First_Name { get; set;}
-            [Required]
-            public string Last_Name{ get; set;}
-            [Required]
-            public string EGN { get; set;}
-            [Required]
-            public string PhoneNumber { get; set;}
         }
 
 
@@ -123,13 +113,11 @@ namespace Rent_a_car.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new Driver { PhoneNumber = Input.PhoneNumber, EGN = Input.EGN, UserName = Input.UserName, Email = Input.Email, First_Name = Input.First_Name, Last_Name = Input.Last_Name };
+                var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
-
-                await _userManager.AddToRoleAsync(user, "Admin");
 
                 if (result.Succeeded)
                 {
