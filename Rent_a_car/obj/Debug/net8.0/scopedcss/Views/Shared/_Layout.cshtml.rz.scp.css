@@ -16,7 +16,15 @@ a[b-9nh1i365f2] {
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
+.text-info[b-9nh1i365f2], .nav-item[b-9nh1i365f2] {
+    font-weight: bold;
+    color: #000000;
+    transition: 0.3s;
+}
 
+.text-info[b-9nh1i365f2], .nav-item:hover[b-9nh1i365f2] {
+   color: #ff5500; 
+}
 .nav-pills .nav-link.active[b-9nh1i365f2], .nav-pills .show > .nav-link[b-9nh1i365f2] {
     color: #fff;
     background-color: #1b6ec2;

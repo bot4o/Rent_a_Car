@@ -126,7 +126,14 @@
             }
         });
     }
+    function showAlert() {
+        if('@ViewBag.isSaved' == 'True')
+        {
+            alert("Booking successfull!")
+        }
+    }
     $(document).ready(function () {
+        showAlert();
         getBrand();
         getDriver();
         $('#brandddl').change(function (e) {

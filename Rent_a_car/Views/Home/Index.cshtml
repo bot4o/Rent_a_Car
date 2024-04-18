@@ -3,6 +3,7 @@
 @inject SignInManager<Driver> SignInManager
 @inject UserManager<Driver> UserManager
 
+@model IEnumerable<Rent_a_car.Models.Car>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -25,13 +26,30 @@
             </div>
         </div>
     </div>
+    @if (User.IsInRole("Admin"))
+    {
+    <h1>Hi Admin</h1>
+    }
+    else
+    {
+    <h1> Hi Member</h1>    
+    }
+    <div class="row mt-3">
+        @foreach(var item in Model.ToList())
+        {
+            <div class="col-4">
+                <div class="mt-2 p-3 shadow rounded">
+                    <div class="card" style="height: 200px">
+                        <div class="card-body">
+                            <h5 class="text-info">@item.Brand @item.Model</h5>
+                            <p class="card-info"><span class="fw-bold">Description:</span> @item.Description</p>
+                            <p class="card-info"><span class="fw-bold">Seating Capacity:</span> @item.Seats</p>
+                            <p class="card-info"><span class="fw-bold">Year:</span> @item.Year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div> 
 </div>
 
-@if (User.IsInRole("Admin"))
-{
-    <h1>Hi Admin</h1>
-}
-else
-{
-    <h1> Hi Member</h1>    
-}

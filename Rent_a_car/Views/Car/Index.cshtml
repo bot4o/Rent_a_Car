@@ -46,6 +46,33 @@
                     <h3 class="text-info">Car List</h3>
                     @Html.ActionLink("Add New Car", "Add", "Car", null, new {@class="btn btn-sm btn-primary"})
                 </div>
+                <table class="table table-responsive table-bordered text-center">
+                    <thead class=" text-info">
+                        <tr>
+                            <th>ID</th>
+                            <th>Brand</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Seats</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Brand</td>
+                            <td>@item.Model</td>
+                            <td>@item.Year</td>
+                            <td>@item.Seats</td>
+                            <td>@item.Description</td>
+                            <td>@item.Price</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
                 }
                 </div>
             </div>
