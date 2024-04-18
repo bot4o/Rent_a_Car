@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Rent_a_car.Models;
 using Rent_a_car.Repository;
+using Microsoft.AspNetCore.Identity;
+using Humanizer;
 
 namespace Rent_a_car.Controllers
 {
@@ -31,11 +33,13 @@ namespace Rent_a_car.Controllers
         [HttpPost]
         public IActionResult Add(MakeRentModel rent)//egh egh!!!
         {
+            rent.UserId = data.GetCurrentUserId(HttpContext);
+
             Rent k = new Rent();
-            k.DriverId = rent.UserId;
+            k.DriverId = rent.UserId; //invallid
             k.CarId = data.GetCarIdByBrandandModel(rent.Brand, rent.Model);
             k.StartDate = rent.StartDate;
-            k.EndDate = rent.EndDate;
+            k.EndDate = rent.EndDate; //UserId for some reason is invalid
             if (!ModelState.IsValid)
                 return View(rent);
             ViewBag.IsSaved = data.BookingNow(k);

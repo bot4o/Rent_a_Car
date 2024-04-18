@@ -17,7 +17,7 @@ namespace Rent_a_car.Repository
 
         string GetDriverIdByUsername(string username);
         int GetCarIdByBrandandModel(string brand, string model);
-
+        string GetCurrentUserId(HttpContext httpContext);
     }
 }
 

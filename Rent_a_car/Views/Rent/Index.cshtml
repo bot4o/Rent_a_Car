@@ -8,10 +8,6 @@
                 @if (User.IsInRole("Admin"))
                 {
                 <div class="mt-3 p-3 shadow rounded">
-                    <div class="d-flex justify-content-between border-bottom mb-3">
-                        <h2 class="text-info">Rent List</h2>
-                        @Html.ActionLink("Book Now", "Add", "Rent", null, new { @class = "btn btn-sm btn-primary" })
-                    </div>
                     <div class="mt-3 p-3">
                         <table class="table table-responsive table-bordered text-center">
                             <thead class="text-info">
@@ -42,6 +38,10 @@
                 else
                 {
                    <p>Nothing here</p> 
+                   <div class="d-flex justify-content-between border-bottom mb-3">
+                       <h2 class="text-info">Rent List</h2>
+                       @Html.ActionLink("Book Now", "Add", "Rent", null, new { @class = "btn btn-sm btn-primary" })
+                   </div>
                 }
             
         </div>

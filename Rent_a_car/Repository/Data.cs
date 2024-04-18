@@ -18,6 +18,31 @@ namespace Rent_a_car.Repository
             dbcon = this.configuration.GetConnectionString("ApplicationDbContextConnection");
             this.webhost = webhost;
         }
+        public string GetCurrentUserId(HttpContext httpContext)
+        {
+            string userId = null;
+            string name = httpContext.User.Identity.Name; 
+            SqlConnection con = GetSqlConnection();
+            try 
+            {
+                con.Open();
+                string qry = $"SELECT * FROM AspNetUsers WHERE UserName = '{name}'";
+                SqlDataReader reader = GetData(qry, con);
+                while (reader.Read())
+                {
+                    userId = reader["ID"].ToString();
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return userId;
+        }
         public int GetCarIdByBrandandModel(string brand, string model)
         {
             int carId = 0;
@@ -154,8 +179,8 @@ namespace Rent_a_car.Repository
             try
             {
                 con.Open();
-                string qry = String.Format("Insert into Rents(Selected_car, Start_date, End_date, Driver values(" +
-                        "'{0}','{1}','{2}','{3}')", rent.CarId, rent.StartDate, rent.EndDate, rent.DriverId);
+                string qry = String.Format("INSERT INTO Rents(DriverId, CarId, StartDate, EndDate) VALUES(" +
+                        "'{0}','{1}','{2}','{3}')", rent.DriverId, rent.CarId, rent.StartDate, rent.EndDate);
                 isSaved = SaveData(qry, con);
             }
             catch (Exception)

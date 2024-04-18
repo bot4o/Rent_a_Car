@@ -1,5 +1,5 @@
 @using Microsoft.AspNetCore.Identity
-@model Rent_a_car.Models.Rent
+@model Rent_a_car.Models.MakeRentModel
 @inject SignInManager<Driver> SignInManager
 @inject UserManager<Driver> UserManager
 
@@ -18,6 +18,7 @@
                 </div>
                 <div class="p-3">
                     <form action="/Rent/Add" method="post" autocomplete="">
+                         <input type="hidden" asp-for="UserId" value="@User.Identity.Name" />
                         <div id="locationDetails">
                             <div class="mb-3 row">
                                 <label class="col-3 col-form-label text-info">Start date</label>
