@@ -31,5 +31,24 @@ namespace Rent_a_car.Controllers
             ModelState.Clear();
             return View();
         }
+        public IActionResult Delete(int id)
+        {
+            bool isDeleted = data.DeleteCar(id);
+
+            // Optionally, you can handle the result of deletion
+            if(isDeleted)
+            {
+                // Deletion successful
+                // You can redirect to the index page or return a success message
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                // Deletion failed
+                // You can handle the failure, perhaps show an error message
+                // or redirect to an error page
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

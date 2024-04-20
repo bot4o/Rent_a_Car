@@ -18,6 +18,70 @@ namespace Rent_a_car.Repository
             dbcon = this.configuration.GetConnectionString("ApplicationDbContextConnection");
             this.webhost = webhost;
         }
+
+        public bool DeleteRents(int id)
+        {
+            bool isDeleted = false;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = String.Format($"DELETE FROM Rents WHERE Id = {id}" );
+                SqlDataReader reader = GetData(qry, con); 
+                isDeleted = SaveData(qry, con);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isDeleted;
+        }
+        public bool DeleteDriver(string id)
+        {
+            bool isDeleted = false;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = String.Format($"DELETE FROM AspNetUsers WHERE Id = '{id}'" );
+                SqlDataReader reader = GetData(qry, con); 
+                isDeleted = SaveData(qry, con);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isDeleted;
+        }
+        public bool DeleteCar(int id)
+        {
+            bool isDeleted = false;
+            SqlConnection con = GetSqlConnection();
+            try
+            {
+                con.Open();
+                string qry = String.Format($"DELETE FROM Cars WHERE Id = {id}" );
+                SqlDataReader reader = GetData(qry, con); 
+                isDeleted = SaveData(qry, con);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isDeleted;
+        }
         public string GetCurrentUserId(HttpContext httpContext)
         {
             string userId = null;

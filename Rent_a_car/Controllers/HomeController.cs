@@ -26,7 +26,7 @@ public class HomeController : Controller
         var list = data.GetAllCars();
         return View(list);
     }
-    [Authorize(Roles = "Manager")]
+    [Authorize(Roles = "Admin")]
     public IActionResult Privacy()
     {
         return View();

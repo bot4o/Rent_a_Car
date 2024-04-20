@@ -32,6 +32,12 @@
                                         <td>@item.CarId</td>
                                         <td>@item.StartDate</td>
                                         <td>@item.EndDate</td>
+                                        <td>
+                                            <form method="post" action="@Url.Action("Delete", "Rent")">
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 }
                             </tbody>
@@ -46,9 +52,7 @@
                        <h2 class="text-info">Rent List</h2>
                        @Html.ActionLink("Book Now", "Add", "Rent", null, new { @class = "btn btn-sm btn-primary" })
                    </div>
-                }
-            
+                }       
         </div>
     </div>
 </div>
-

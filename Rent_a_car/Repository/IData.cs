@@ -11,6 +11,9 @@ namespace Rent_a_car.Repository
         List<Driver> GetAllDrivers();
         bool BookingNow(Rent rent);
         List<Rent> GetAllRents();
+        bool DeleteCar(int id);
+        bool DeleteDriver(string id);
+        bool DeleteRents(int id);
 
         List<string> GetBrand();
         List<string> GetModel(string brand);

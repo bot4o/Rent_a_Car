@@ -28,9 +28,12 @@
                         <li class="nav-item">
                             @Html.ActionLink("Car", "Index", "Car", null, new {@class="nav-link text-info"})
                         </li>
+                        @if (User.IsInRole("Admin"))
+                        {
                         <li class="nav-item">
                             @Html.ActionLink("Driver", "Index", "Driver", null, new {@class="nav-link text-info"})
                         </li>
+                        }
                         <li class="nav-item">
                             @Html.ActionLink("Rent", "Index", "Rent", null, new {@class="nav-link text-info"})
                         </li>

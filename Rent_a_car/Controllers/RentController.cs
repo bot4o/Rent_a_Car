@@ -46,6 +46,19 @@ namespace Rent_a_car.Controllers
             ModelState.Clear();
             return View();
         }
+        public IActionResult Delete(int id)
+        {
+            bool isDeleted = data.DeleteRents(id);
+
+            if(isDeleted)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        }
         [HttpGet]
         public IActionResult GetBrand()
         {

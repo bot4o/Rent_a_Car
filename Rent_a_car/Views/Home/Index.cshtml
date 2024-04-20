@@ -26,6 +26,7 @@
             </div>
         </div>
     </div>
+    @*
     @if (User.IsInRole("Admin"))
     {
     <h1>Hi Admin</h1>
@@ -34,6 +35,7 @@
     {
     <h1> Hi Member</h1>    
     }
+    *@
     <div class="row mt-3">
         @foreach(var item in Model.ToList())
         {
