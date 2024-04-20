@@ -10,8 +10,8 @@
     <div class="row">
         <div class="col-6 offset-3">
             <div class="mt-3 p-3 shadow rounded">
-                <div class="text-center border-bottom mb-3 p-3">
-                    <h2 class="text-info">Booking Now</h2>
+                <div class="-center border-bottom mb-3 p-3">
+                    <h2>Booking Now</h2>
                 </div>
                 <div>
                     @Html.ValidationSummary()
@@ -21,20 +21,20 @@
                          <input type="hidden" asp-for="UserId" value="@User.Identity.Name" />
                         <div id="locationDetails">
                             <div class="mb-3 row">
-                                <label class="col-3 col-form-label text-info">Start date</label>
+                                <label class="col-3 col-form-label ">Start date</label>
                                 <div class="col-9">
                                     @Html.TextBoxFor(m => m.StartDate, new { @class = "form-control", type = "datetime-local" })
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label class="col-3 col-form-label text-info">End date</label>
+                                <label class="col-3 col-form-label ">End date</label>
                                 <div class="col-9">
                                     @Html.TextBoxFor(m => m.EndDate, new { @class = "form-control", type = "datetime-local" })
                                 </div>
                             </div>
                             <div id="cardetails">
                                 <div class="mb-3 row">
-                                    <label class="col-3 col-form-label text-info">Brand</label>
+                                    <label class="col-3 col-form-label ">Brand</label>
                                     <div class="col-9">
                                         <select id="brandddl" name="Brand" class="form-select">
                                             <option>Select Brand</option>
@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label class="col-3 col-form-label text-info">Model</label>
+                                    <label class="col-3 col-form-label ">Model</label>
                                     <div class="col-9">
                                         <select id="modelddl" name="Model" class="form-select">
                                             <option>Select Model</option>
@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                                 @* <div class="mb-3 row">
-                                        <label class="col-3 col-form-label text-info">UserName</label>
+                                        <label class="col-3 col-form-label ">UserName</label>
                                             <div class="col-9">
                                                 <select id="driverddl" name="UserName" class="form-select">
                                                     <option>Select Driver</option>
@@ -74,7 +74,7 @@
     </div>
 </div>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript">
+<script type="/javascript">
     function getBrand() {
         $.ajax({
             url: '/Rent/GetBrand',

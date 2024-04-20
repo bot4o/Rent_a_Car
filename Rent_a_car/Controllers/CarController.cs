@@ -11,7 +11,6 @@ namespace Rent_a_car.Controllers
         {
             data = _data;
         }
-        //[Authorize(Rents = "Admin")]
         public IActionResult Index()
         {
             var list = data.GetAllCars();
@@ -35,18 +34,12 @@ namespace Rent_a_car.Controllers
         {
             bool isDeleted = data.DeleteCar(id);
 
-            // Optionally, you can handle the result of deletion
             if(isDeleted)
             {
-                // Deletion successful
-                // You can redirect to the index page or return a success message
                 return RedirectToAction("Index");
             }
             else
             {
-                // Deletion failed
-                // You can handle the failure, perhaps show an error message
-                // or redirect to an error page
                 return RedirectToAction("Index");
             }
         }

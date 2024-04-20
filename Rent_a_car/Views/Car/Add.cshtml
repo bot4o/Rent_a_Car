@@ -8,7 +8,7 @@
         <div class="col-6 offset-3">
             <div class="nt-3 p-3 shadow rounded">
                 <div class="text-center">
-                    <h2 class="text-info">Add New Car</h2>
+                    <h2>Add New Car</h2>
                 </div>
                 <div>
                     @Html.ValidationSummary()
@@ -16,37 +16,37 @@
                 <div class="nt-3 p-3">
                     <form action="/Car/Add" method="post" enctype="multipart/form-data" autocomplete="off">
                         <div class="mb-3 row">
-                            <label class="col-3 col-from-label text-info">Brand</label>
+                            <label class="col-3 col-from-label">Brand</label>
                             <div class="col-9">
                                 @Html.TextBoxFor(m => m.Brand, new { @class = "form-control", placeholder="Enter Brand"})
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-3 col-from-label text-info">Model</label>
+                            <label class="col-3 col-from-label ">Model</label>
                             <div class="col-9">
                                 @Html.TextBoxFor(m => m.Model, new { @class = "form-control", placeholder="Enter Model"})
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-3 col-from-label text-info">Year</label>
+                            <label class="col-3 col-from-label ">Year</label>
                             <div class="col-9">
                                 @Html.TextBoxFor(m => m.Year, new { @class = "form-control", placeholder="Enter Year"})
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-3 col-from-label text-info">Seats</label>
+                            <label class="col-3 col-from-label ">Seats</label>
                             <div class="col-9">
                                 @Html.TextBoxFor(m => m.Seats, new { @class = "form-control", placeholder="Enter Seats"})
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-3 col-from-label text-info">Description</label>
+                            <label class="col-3 col-from-label ">Description</label>
                             <div class="col-9">
                                 @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder="Enter Description"})
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-3 col-from-label text-info">Price</label>
+                            <label class="col-3 col-from-label ">Price</label>
                             <div class="col-9">
                                 @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder="Enter Price"})
                             </div>
@@ -61,7 +61,7 @@
     </div>
 </div>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript">
+<script type="/javascript">
     function showAlert() {
         if('@ViewBag.isSaved' == 'True') {
             alert("New Car Successfully Added!");
